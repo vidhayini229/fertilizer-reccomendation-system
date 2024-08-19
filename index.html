@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fertilizer Recommendation System</title>
+    <style>
+        body{
+            background-color: aqua;
+            align-content: center;
+            background-image: url('../static/background.png');
+        }
+    </style>
+</head>
+<body>
+
+    <h1 align="center">Fertilizer Recommendation System</h1>
+
+    <form align="center" method="post" action="/predict">
+        <label>Nitrogen</label><br>
+        <input type="text" name="Nitrogen"><br><br>
+
+        <label>Potassium</label><br>
+        <input type="text" name="Potassium"><br><br>
+
+        <label>Phosphorous</label><br>
+        <input type="text" name="Phosphorous"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+
+        {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    </form>
+    <li align="center"><a href="suggestions.html">Suggestions</a></li>
+
+</body>
+</html>
